@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="patient.css">
+    <script src="06form.js" type="text/javascript">
+    </script>
+</head>
+<body>
+    <div class="header"><h1 style="color: rgb(126, 5, 5);"> <a href="index.html" style="text-decoration: none;"><img src="pngwing.com.png" alt="" width="50px" height="50">IRCS Blood Bank Service</h1></a></div>
+    
+    <div class="nav-bar">
+        <span><a href="index.html">Home</a></span>
+        <span><a href="https://indianredcross.org/ircs/aboutus" target="_blank">About Us</a></span>
+        <span><a href="#section6">Contact</a></span>
+        <span><a href="01Login.html">Exit</a></span>
+        
+    </div>
+    <div class="flex-1">
+        <div class="sidebar1">
+            
+           
+            <button class="db-btn btn" onclick="donateBlood();">
+                <a href="#section1" class="d-btn"><h4 >Donate Blood</h4></a>
+            </button>
+             <br>
+            <button class="avail-btn btn" onclick="available()">
+                <a href="#section2" class="avai-btn"><h4>Availablity of Blood</h4></a>
+            </button>
+            <br>
+            <button class="pap-btn btn" onclick="pap()">
+                <a href="#section3" class="pa-btn"><h4>Who can Donate to Whom?</h4></a>
+            </button><br>
+            <button class="match-btn btn" onclick="match()">
+                <a href="#section4" class="matc-btn"><h4>Match</h4></a>
+            </button><br>
+            <button class="faq-btn btn" onclick="faq()">
+                <a href="#section5" class="fa-btn"><h4>FAQ's</h4></a>
+            </button><br>
+            
+            
+            
+            
+
+            
+            
+            
+        </div>
+            
+        <div class="main-content">
+           
+            <div class="slides">
+                <a name="section0"></a>
+                <h3 align="center">Spotlight</h3>
+                <br>
+                
+                <hr noshade="2" color="" style="color: rgb(244, 131, 131);">
+                <br><br><br>
+                <p>One donation can save multiple lives. Here are the facts:
+                </p>
+                <ul>
+                    <li>We are ranking top 14 in India in the service of blood donation across India </li>
+                    <li>Just 1 donation can save up to 3 lives.</li>
+                    <li>More than 38,000 blood donations are needed every day all over the world.</li>
+
+                </ul>
+                <br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                
+                <a name="section1"></a>
+                <hr noshade="3" style="color: rgb(222, 134, 57);" color="" width="70%">
+                <h2 align="center">Blood Donation</h2>
+
+                <div class="donateblood-form">
+                    <br>
+                    <p>Fill the form given below:</p>
+
+                    <form  class="donorform"  onsubmit="register()">
+                        <input type="text" name="name" id="name" placeholder="Donor's name" pattern="/^[A-Za-z\s.'-]+$/" title="Enter letters only" required>
+                        <br><br>
+                        
+                        <input type="text" name="age" id="age" placeholder="Donor's age"  required> <br>
+                        <br>
+
+                        <input type="text" name="sex" id="sex" placeholder="Donor's gender"  required> <br>
+                        <br>
+                        
+                        <input type="text" name="blood" id="blood" placeholder="Donor's Blood Group" pattern="^(A|B|AB|O)[+-]$
+                        " title="Invalid Group" required> <br>
+                        <br>
+
+                        
+                        <input type="text" name="address" id="address" placeholder="Pincode | ZipCode" required>
+                        <br><br>
+                        <input type="text" name="phno" id="phno" placeholder="Mobile number" required>
+                        <br><br>
+                        <button id="submit"  >Register</button> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" name="" id="reset" value = "Clear">
+                        
+                    </form>    
+                </div>
+                <div id="reg-status"></div><br><br>
+                
+            
+                
+                <a name="section2"></a>
+                <hr noshade="2" style="color: rgb(248, 160, 160);" color=""width="70%">
+                    <h2 align="center" style="color: rgba(171, 193, 245, 0.966);">Availablity Check</h2>
+                    <div class="avail-blood">
+                        <div>
+                            <details>
+                                <summary>A+</summary>
+                                <p id="up-ap">
+                                    No of Donors available : 50<br>
+                                </p>
+                            </details>
+                        </div>
+
+                        <div>
+                            <details>
+                                <summary>B+</summary>
+                                <p id="up-bp">
+                                    No of Donors available : 45<br>
+                                </p>
+                            </details>
+                        </div>
+                        <div>
+                            <details>
+                                <summary>AB+</summary>
+                                <p id="up-abp">
+                                    No of Donors available : 30<br>
+                                </p>
+                            </details>
+                        </div>
+                        <div>
+                            <details>
+                                <summary>O+</summary>
+                                <p id="up-op">
+                                    No of Donors available : 60<br>
+                                </p>
+                            </details>
+                        </div>
+                        <!--Negative Blood Groups-->
+                        <div>
+                            <details>
+                                <summary>A-</summary>
+                                <p id="up-am">
+                                    No of Donors available : 30<br>
+                                </p>
+                            </details>
+                        </div>
+
+                        <div>
+                            <details>
+                                <summary>B-</summary>
+                                <p id="up-bm">
+                                    No of Donors available : 22<br>
+                                </p>
+                            </details>
+                        </div>
+                        <div>
+                            <details>
+                                <summary>AB-</summary>
+                                <p id="up-abm">
+                                    No of Donors available : 9<br>
+                                </p>
+                            </details>
+                        </div>
+                        <div>
+                            <details>
+                                <summary>O-</summary>
+                                <p id="up-om">
+                                    No of Donors available : 4<br>
+                                </p>
+                            </details>
+                        </div>
+                        
+                    </div>
+                    <hr noshade="3" style="color: rgb(253, 183, 175);" color="" width="70%">
+
+                <a name="section3"></a>
+                
+                <div class="blood-group-donor">
+                    
+                    <h2 align="center">Plasma & Platelet</h2>
+
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <th>Blood Type</th>
+                                <th>You Can Donate To</th>
+                                <th>You Can Receive From</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>O+</td>
+                                <td>O+, A+, B+, AB+</td>
+                                <td>O+, O-</td>
+                            </tr>
+                
+                            <tr>
+                                <td>A+</td>
+                                <td>A+, AB+</td>
+                                <td>A+, A-, O+, O-</td>
+                            </tr>
+                
+                            <tr>
+                                <td>B+</td>
+                                <td>B+, AB+</td>
+                                <td>B+, B-, O+, O-</td>
+                            </tr>
+                
+                            <tr>
+                                <td>AB+</td>
+                                <td>AB+</td>
+                                <td>All Blood groups</td>
+                            </tr>
+                            <tr>
+                                <td>O-</td>
+                                <td>All Blood Groups</td>
+                                <td>O-</td>
+                            </tr>
+                
+                            <tr>
+                                <td>A-</td>
+                                <td>A-, A+, AB+, AB-</td>
+                                <td>A-, O-</td>
+                            </tr>
+                
+                            <tr>
+                                <td>B-</td>
+                                <td>B-, B+, AB+, AB-</td>
+                                <td>B-, O-</td>
+                            </tr>
+                
+                            <tr>
+                                <td>AB-</td>
+                                <td>AB+, AB-</td>
+                                <td>AB-, A-, B-, O-</td>
+                            </tr>
+                            
+                
+                        </tbody>
+                    </table>
+                </div>
+                <a name="section4"></a>
+                <div class="part4">
+                    <hr noshade="3" style="color: rgb(253, 183, 175);" color="" width="70%">
+                    <br><br><br>
+                    
+                <div class="requestBlood">
+                    
+                    <div class="sub-request-blood">
+                        <img src="patient.jpeg" alt="blood donation">
+                        <div>
+                            <h2>Need Help,can save your Life?</h2>
+                            <p>Now that you know how your blood type can be helped by recipients, please schedule an appointment to request blood today.</p>
+                        </div>
+                    </div>
+                    <div class="requestBlood-div2">
+                        <form onsubmit="alertReddy()" class="requestBlood-div2">
+                        <p>&nbsp;&nbsp;Find a blood drive near you&nbsp;&nbsp;<span><input type="text" name="pincode" id="pincode" placeholder="Zip or Pincode" required> 
+                        &nbsp;&nbsp;<input type="number" name="phone no" id="phno" placeholder="Mobile number" required></span>
+                        <button id="appointment" type="submit">Make an appointment</button> </p> </form>
+                        </div>
+                    </div>
+                </div>
+
+                <a name="section5"></a>
+                <div class="part5">
+                    <hr noshade="3" style="color: rgb(253, 183, 175);" color="" width="70%">
+                    <h2 style="color: rgba(234, 161, 245, 0.893);">Frequently Asked Questions (FAQ's)</h2>
+
+                    <button class="accordion">Is it to donate blood?</button>
+                    <div class="panel">
+                    <p>Yes. Donating blood is safe. The supplies used to collect blood are sterile and only used once.</p>
+                    </div>
+
+                    <button class="accordion">Are there any age limits for blood donors?</button>
+                    <div class="panel">
+                    <p>Each state sets the minimum blood donor age. You must be at least 16 or 17-years-old depending on your state. Some blood centers may have an upper age limit. Please call and check with your local blood center for more information.</p>
+                    </div>
+
+                    <button class="accordion">Will it hurt when you insert the needle?</button>
+                    <div class="panel">
+                    <p>Only for a moment. Pinch the fleshy, soft underside of your arm. That pinch is similar to what you will feel when the needle is inserted.</p>
+                    </div>
+
+                    <button class="accordion">How long does a blood donation take?</button>
+                    <div class="panel">
+                    <p>The entire process takes about one hour and 15 minutes; the actual donation of a pint of whole blood unit takes eight to 10 minutes. However, the time varies slightly with each person depending on several factors including the donor’s health history and attendance at the blood drive.</p>
+                    </div>
+
+                    <button class="accordion">How often can I donate blood?</button>
+                    <div class="panel">
+                    <p>The entire process takes about one hour and 15 minutes; the actual donation of a pint of whole blood unit takes eight to 10 minutes. However, the time varies slightly with each person depending on several factors including the donor’s health history and attendance at the blood drive.You must wait at least eight weeks (56 days) between donations of whole blood and 16 weeks (112 days) between Power Red donations. Whole blood donors can donate up to 6 times a year. Platelet apheresis donors may give every 7 days up to 24 times per year. Regulations are different for those giving blood for themselves (autologous donors).</p>
+                    </div>
+                    <br><br><br><br>
+                    <script>
+                    var acc = document.getElementsByClassName("accordion");
+                    var i;
+
+                    for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                        } else {
+                        panel.style.display = "block";
+                        }
+                    });
+                    }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a name="section6"></a>
+    <div class="info">
+        <br><br>
+        <h3 style="color: black;" align="center">Follow us</h3>
+        <div class="logo1">
+            
+            <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjkwNTU3MTg4LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D">
+                <img src="facebook-logo-2019.png" alt="facebook" width="40px" height="40px" id="facebook">
+            </a>&nbsp;
+
+            <a href="https://www.linkedin.com/feed/">
+                <img src="icons8-linkedin-50.png" alt="linkedin" width="40px" height="40px">
+            </a>&nbsp;
+
+
+            <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1">
+                <img src="google-plus-png-logo-3701.png" alt="Mail" width="40px" height="40px">
+            </a>
+
+            <a href="www.instagram.com">
+                <img src="insta.gif" alt="insta" width="40px" height="40px">
+            </a>
+
+            
+        </div>       
+
+        <div class="end">
+            <div > <h3>Getting Started</h3>
+            <p>What is This ICRS <br><br>
+                Who Organized ICRS?<br><br>How to become Member of this</p></div>
+            <div> <h3>Manage your Account</h3><p>
+                Unable to login <br><br>How to Register <br><br> How to get the advices
+            </p>
+            </div>
+            <div> <h3>Quick links</h3><p>Update Password <br><br> Reset Data Factory <br><br>
+                De-activate Account</p></div>
+        </div>
+
+    </div>
+   
+    <script>
+        const donors= {
+            name:[],
+            age: [],
+            gender:[],
+            bloodType:[],
+            pincode:[],
+            mobno:[]
+        }
+
+        var cnt = 0; // No of Donor Registered
+                // A, B, AB, O 
+        var btp = [50, 45, 30, 60]; // +ve
+        var btm = [30, 22, 9, 4]; //-ve
+
+        function donateBlood(){
+            const content = document.querySelector('.db-btn');
+            
+            content.setAttribute('id', 'afterClick');
+            document.querySelector('.avail-btn').removeAttribute('id',afterClick);
+            document.querySelector('.pap-btn ').removeAttribute('id',afterClick);
+            document.querySelector('.faq-btn').removeAttribute('id',afterClick);
+            document.querySelector('.match-btn').removeAttribute('id',afterClick);
+
+            const content2 = document.querySelector('.d-btn');
+            content2.setAttribute('id', 'afterclick');
+            document.querySelector('.avai-btn').removeAttribute('id',afterclick);
+            document.querySelector('.pa-btn ').removeAttribute('id',afterclick);
+            document.querySelector('.fa-btn').removeAttribute('id',afterclick);
+            document.querySelector('.matc-btn').removeAttribute('id',afterclick);
+
+            
+
+            
+            
+        }
+        function available(){
+            const content = document.querySelector('.avail-btn');
+            content.setAttribute('id', 'afterClick');
+            document.querySelector('.db-btn').removeAttribute('id',afterClick);
+            document.querySelector('.pap-btn ').removeAttribute('id',afterClick);
+            document.querySelector('.faq-btn').removeAttribute('id',afterClick);
+            document.querySelector('.match-btn').removeAttribute('id',afterClick);
+
+            
+            const content2 = document.querySelector('.avai-btn');
+            content2.setAttribute('id', 'afterclick');
+            document.querySelector('.d-btn').removeAttribute('id',afterclick);
+            document.querySelector('.pa-btn ').removeAttribute('id',afterclick);
+            document.querySelector('.fa-btn').removeAttribute('id',afterclick);
+            document.querySelector('.matc-btn').removeAttribute('id',afterclick);
+        }
+
+        function pap(){
+            const content = document.querySelector('.pap-btn');
+            content.setAttribute('id', 'afterClick');
+            document.querySelector('.db-btn').removeAttribute('id',afterClick);
+            document.querySelector('.avail-btn ').removeAttribute('id',afterClick);
+            document.querySelector('.faq-btn').removeAttribute('id',afterClick);
+            document.querySelector('.match-btn').removeAttribute('id',afterClick);
+
+            const content2 = document.querySelector('.pa-btn');
+            content2.setAttribute('id', 'afterclick');
+            document.querySelector('.d-btn').removeAttribute('id',afterclick);
+            document.querySelector('.avai-btn ').removeAttribute('id',afterclick);
+            document.querySelector('.fa-btn').removeAttribute('id',afterclick);
+            document.querySelector('.matc-btn').removeAttribute('id',afterclick);
+        }
+        
+        function faq(){
+            const content = document.querySelector('.faq-btn');
+            content.setAttribute('id', 'afterClick');
+            document.querySelector('.db-btn').removeAttribute('id',afterClick);
+            document.querySelector('.avail-btn ').removeAttribute('id',afterClick);
+            document.querySelector('.pap-btn').removeAttribute('id',afterClick);
+            document.querySelector('.match-btn').removeAttribute('id',afterClick);
+
+            
+            const content2 = document.querySelector('.fa-btn');
+            content2.setAttribute('id', 'afterclick');
+            document.querySelector('.d-btn').removeAttribute('id',afterclick);
+            document.querySelector('.avai-btn ').removeAttribute('id',afterclick);
+            document.querySelector('.pa-btn').removeAttribute('id',afterclick);
+            document.querySelector('.matc-btn').removeAttribute('id',afterclick);
+        }
+
+        function match(){
+            const content = document.querySelector('.match-btn');
+            content.setAttribute('id', 'afterClick');
+            document.querySelector('.db-btn').removeAttribute('id',afterClick);
+            document.querySelector('.avail-btn ').removeAttribute('id',afterClick);
+            document.querySelector('.pap-btn').removeAttribute('id',afterClick);
+            document.querySelector('.faq-btn').removeAttribute('id',afterClick);
+
+            
+            const content2 = document.querySelector('.matc-btn');
+            content2.setAttribute('id', 'afterclick');
+            document.querySelector('.d-btn').removeAttribute('id',afterclick);
+            document.querySelector('.avai-btn ').removeAttribute('id',afterclick);
+            document.querySelector('.fa-btn').removeAttribute('id',afterclick);
+            document.querySelector('.pa-btn').removeAttribute('id',afterclick);
+        }
+
+        function register(){
+            var name = document.getElementById("name");
+            var flag = true;
+            // Validation //
+            if(name == null || name == ""){
+                alert('');
+                flag = false;
+            }
+            var age = document.getElementById("age");
+            var gender = document.getElementById("sex");
+            var bloodtype = document.getElementById("blood");
+            
+            var pincode = document.getElementById("address");
+            var mobno = document.getElementById("phno");
+            var status = document.querySelector('#reg-status');
+
+        
+            // Update Donors
+            donors.name[cnt] = name.value;
+            donors.age[cnt] = age.value;
+            donors.gender[cnt] = gender.value;
+            donors.bloodType[cnt] = bloodtype.value;
+            donors.pincode[cnt] = pincode.value;
+            donors,mobno[cnt] = mobno.value;
+
+            if(bloodtype.value === "A+"){                
+                btp[0]++;
+                document.querySelector('#up-ap').innerHTML=`No of Donors avaiable : ${btp[0]}.`;
+            }
+            else if(bloodtype.value === "A-"){
+                btm[0]++;
+                document.querySelector('#up-am').innerHTML=`No of Donors avaiable : ${btm[0]}.`;
+            }
+
+            if(bloodtype.value === "B+"){
+                btp[1]++;
+                document.querySelector('#up-bp').innerHTML=`No of Donors avaiable : ${btp[1]}.`;
+            }
+            else if(bloodtype.value === "B-"){
+                btm[1]++;
+                document.querySelector('#up-bm').innerHTML=`No of Donors avaiable : ${btm[1]}.`;
+            }
+
+            if(bloodtype.value === "AB+"){
+                btp[2]++;
+                document.querySelector('#up-abp').innerHTML=`No of Donors avaiable : ${btp[2]}.`;
+            }
+            else if(bloodtype.value === "AB-"){
+                btm[2]++;
+                document.querySelector('#up-abm').innerHTML=`No of Donors avaiable : ${btm[2]}.`;
+            }
+
+            if(bloodtype.value === "O+"){
+                btp[3]++;
+                document.querySelector('#up-op').innerHTML=`No of Donors avaiable : ${btp[3]}.`;
+            }
+            else if(bloodtype.value === "O-"){
+                btm[3]++;
+                document.querySelector('#up-om').innerHTML=`No of Donors avaiable : ${btm[3]}.`;
+            }
+
+
+            cnt++;
+
+            //if(flag == true){
+            alert("Registration successful!"); 
+            status.innerHTML = `Dear, ${name.value} you have been successfully registered.Check your details:<br><br>Name:${name.value}<br>Age:${age.value}<br>Gender:${gender.value}<br>Blood Group:${bloodtype.value}<br>Address:${pincode.value}<br>Mobile no:${mobno.value}.`;
+            //}
+                
+                
+            
+            
+            
+        }
+            
+            
+        
+        
+        function alertReddy(){
+            alert("Succesfully Done, Our agent nearby you will contact Soon !!!\nThank you for your patience");
+        }
+    
+    </script>
+
+
+
+</body>
+</html>

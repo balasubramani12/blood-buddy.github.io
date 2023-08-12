@@ -1,0 +1,16 @@
+.avail-blood{
+    display: grid;
+    grid-template-columns:repeat(4,20%);
+    grid-template-rows: repeat(2,80px);
+    gap: 5px;
+    margin-left: 15%;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+}
+.avail-blood > div{
+    background-color: #f8b9b9;
+    padding: 5px;
+    border-radius: 8px;
+    padding-top: 10px;
+}

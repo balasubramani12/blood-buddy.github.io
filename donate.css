@@ -1,0 +1,44 @@
+body > h1{
+    color: firebrick;
+    font-size: 35px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 5px;
+    background-color: rgb(255, 91, 91);
+    height:60px;
+}
+
+.nav-bar > button{
+    border: none;
+    padding: 0px 30px;
+    font-weight: 600;
+    border-radius: 8px;
+    height: 30px;
+    border-color:3px brown solid;
+}
+
+.flex-1{
+    display: flex;
+    gap: 40px;
+}
+
+.sidebar1{
+    margin-top: 3%;
+    margin-left: 3%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-right: 2px rgb(201, 194, 194) solid;
+    width:20%
+}
+.main-content{
+    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.mainsub1{
+    align-items: center;
+}

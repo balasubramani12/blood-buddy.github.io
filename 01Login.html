@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body><a href="index.html" style="text-decoration: none;">
+    <h1> <img src="pngwing.com.png" alt="" width="50px" height="50">IRCS Blood Bank Service</h1></a>
+
+    <div class="loginpage">
+        <div class="login1">
+            <h1>Login to Your Account</h1>
+
+            <p>Login using Social networks</p>
+
+            
+            <div class="logo1">
+                <a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjkwNTU3MTg4LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D">
+                    <img src="facebook-logo-2019.png" alt="facebook" width="40px" height="40px" id="facebook">
+                </a>&nbsp;
+
+                <a href="https://www.linkedin.com/feed/">
+                    <img src="icons8-linkedin-50.png" alt="linkedin" width="40px" height="40px">
+                </a>&nbsp;
+
+
+                <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1">
+                    <img src="google-plus-png-logo-3701.png" alt="Mail" width="40px" height="40px">
+                </a>
+            </div>       
+                <br>
+
+                <hr noshade="2" width="50%" >
+
+            <div>
+                <div class="login-form">
+                    <form class="login-form">
+                        <input type="username" placeholder="Username" id="username" required>
+                        
+                        <br><br>
+        
+                        <input type="password" placeholder="Password" id="pwd" required minlength="6" >
+                        <br><br>
+                    </form>
+                    
+                    <a href="patient.html" target="_blank"><button id="signin" onclick="resultCheck()">Sign In</button></a>
+                </div>
+
+                <script>
+                    function resultCheck(){
+                        username = document.querySelector("#username").value;
+                        pwd = document.querySelector("#pwd").value;
+                        if(username === " " || username == null){
+                            res = document.querySelector("#temp-msg").innerHTML = `Invaid username`;
+                        }
+                       
+
+                    }
+                </script>
+            </div>
+            
+            <div id ="temp-msg"></div>
+                
+
+
+                
+        </div>
+
+        <div class="signup1">
+            <h1>New Here?</h1>
+
+            <p>Sign up and discover a great amount connections and oppurtunities!</p>
+            <a href="signup01.html"><button id="signup">Sign Up ➜</button></a>
+            
+
+        </div>
+
+    </div>
+</body>
+</html>
